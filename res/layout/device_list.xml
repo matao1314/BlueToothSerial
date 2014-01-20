@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:id="@+id/rl_layout"
+  		android:layout_width="fill_parent"
+  		android:layout_height="45dp"
+  		android:background="@drawable/title_bar"
+  		android:gravity="center_vertical"  > 
+
+		<Button
+		    android:id="@+id/device_list_back_btn"
+		    android:layout_width="70dp"
+		    android:layout_height="wrap_content"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/title_btn_back"
+		    android:onClick="btn_device_back"
+		    android:text="返回"
+		    android:textColor="#000"
+		    android:textSize="14sp" />
+
+   		<TextView
+   		    android:layout_width="wrap_content"
+   		    android:layout_height="wrap_content"
+   		    android:layout_centerInParent="true"
+   		    android:text="请选择一个设备连接"
+   		    android:textColor="#000000"
+   		    android:textSize="20sp" />   
+	</RelativeLayout>
+	
+    
+    <ScrollView
+	    android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:scrollbarStyle="outsideOverlay"  
+   		android:background="@drawable/chat_bg_default" >
+
+   		<LinearLayout
+   		    android:layout_width="match_parent"
+   		    android:layout_height="wrap_content"
+   		    android:gravity="center_horizontal"
+   		    android:orientation="vertical" >
+
+   			<TextView
+   			    android:id="@+id/title_paired_devices"
+   			    android:layout_width="fill_parent"
+   			    android:layout_height="wrap_content"
+   			    android:background="#666"
+   			    android:paddingLeft="8dp"
+   			    android:text="@string/title_paired_devices"
+   			    android:textColor="#fff" />
+   				<!-- android:visibility="gone" />  -->
+
+			<ListView
+			    android:id="@+id/paired_devices"
+			    android:layout_width="fill_parent"
+			    android:layout_height="325dp"
+			    android:stackFromBottom="true" />
+			
+			<TextView android:id="@+id/title_new_devices"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/title_other_devices"
+				android:background="#666"
+				android:textColor="#fff"
+				android:paddingLeft="8dp" />
+				<!-- android:visibility="gone"  />  隐藏 -->
+
+			<ListView
+			    android:id="@+id/new_devices"
+			    android:layout_width="fill_parent"
+			    android:layout_height="189dp"
+			    android:layout_weight="13.79"
+			    android:stackFromBottom="true" />
+
+				<!-- android:stackFromBottom="true"	 你做好的列表就会显示你列表的最下面 -->
+				<!-- android:transcriptMode="alwaysScroll" Android平台的控件（支持ScrollBar）自动滑动到最底部 -->
+				<!-- android:fastScrollEnabled="true" ListView列表控件的快速滚动滑块启用 -->
+				<!-- android:fadeScrollbars="true" 实现滚动条的自动隐藏和显示 -->
+				<!-- android:scrollbars="none" 不活动的时候隐藏，活动的时候也隐藏 -->
+
+   			<Button
+   			    android:id="@+id/button_scan"
+   			    android:layout_width="300dp"
+   			    android:layout_height="wrap_content"
+   			    android:layout_centerHorizontal="true"
+   			    android:layout_marginBottom="14dp"
+   			    android:layout_marginTop="14dp"
+   			    android:layout_weight="2.28"
+   			    android:background="@drawable/btn_style_green"
+   			    android:text="@string/button_scan" />
+
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

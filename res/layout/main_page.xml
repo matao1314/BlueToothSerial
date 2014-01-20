@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/mainsmarthome"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <EditText android:ems="10" android:id="@+id/editText1" android:layout_width="match_parent"/>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送数据" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginRight="12"
+            android:ems="10"
+            android:inputType="textPersonName" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tabpager"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" >
+ 
+        </android.support.v4.view.ViewPager>  
+    </LinearLayout>
+
+   
+
+</RelativeLayout>

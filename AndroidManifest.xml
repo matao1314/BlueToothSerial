@@ -1,0 +1,129 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ma.bluetoothserial"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="15" />
+	<!-->
+     	允许访问振动设备(Allows access to the vibrator)
+    -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+ 	<uses-permission android:name="android.permission.BLUETOOTH" />
+    
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name">
+         
+        <!-- .表示MainActivity是当前包com.ljq.activity下的类。如果类在应用的当前包下，可以省略点符号；如果类在应用的子包下必须加点，
+                            如：MainActivity类在com.ljq.activity.user包下可以这样写：<activity android:name=".user.MainActivity" /> -->
+        
+        <activity
+            android:name=".Appstart"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Anim_style2"  >
+             <!-- 
+             0、android:configChanges="orientation|keyboardHidden"  当横竖屏切换的时候会直接调用onCreate方法中的onConfigurationChanged方法，而不是重新执行onCreate方法，如果没有使用这个属性就会重新调用onCreate方法了。
+             1、一个应用程序可以有多个Activity，每个Activity是同级别的，那么在启动程序时，最先启动哪个Activity呢？
+                                有些程序可能需要显示在程序列表里，有些不需要。怎么定义呢？
+                android.intent.action.MAIN决定应用程序最先启动的Activity 
+                android.intent.category.LAUNCHER决定应用程序是否显示在程序列表里
+             2、因为你的程序可能有很多个activity只要xml配置文件中有这么一个intent-filter，而且里面有这个launcher，那么这个activity就是点击程序时最先运行的那个activity。
+             3、现在只有一个activity，那么加不加就没有关系了。用于模拟器启动时设置为默认打开为的activity。
+            -->
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".Viewpager"
+            android:theme="@style/Anim_style2" >
+        </activity>
+        <activity
+            android:name=".Viewdoor"
+            android:theme="@style/Anim_style2" >
+        </activity>
+        <activity
+            android:name=".Main"
+            android:theme="@style/Anim_style_title" >
+        </activity>
+        <activity
+            android:name=".ExitApp"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <!--
+        <activity
+            android:name=".Appstart"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Anim_style2" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        -->
+        
+        
+         <activity
+             android:name=".Infotest"
+             android:theme="@android:style/Theme.NoTitleBar" />
+         <activity
+            android:name=".DeviceList"
+             android:theme="@android:style/Theme.NoTitleBar" />
+         <activity
+            android:name=".Exit11111111"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".WhatsnewDoor"
+            android:theme="@style/Anim_style2" />
+        <activity
+            android:name=".MainAppPage"
+            android:theme="@style/Anim_style2" />
+        <activity
+            android:name=".Login"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".Welcome"
+            android:theme="@style/Anim_style2" />
+        <activity
+            android:name=".Whatsnew"
+            android:theme="@style/Anim_style2" />
+        <activity
+            android:name=".ChatActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".ShakeActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".Infogeren"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".Common_settings"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="ExitFromSettings"
+            android:theme="@style/MyDialogStyleBottom" />
+        <activity
+            android:name="InfoXiaoheiHead"
+            android:theme="@style/HeadScale" />
+        <activity
+            android:name="LoadingActivity"
+            android:theme="@style/MyDialogStyle" />
+        <activity
+            android:name="MainTopRightDialog"
+            android:theme="@style/MyDialogStyleTop" />
+        
+    </application>
+
+</manifest>
